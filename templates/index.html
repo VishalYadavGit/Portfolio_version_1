@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% block style %}
+<style>
+  
+  .content{margin-left: 5vw;font-family: 'Heebo', sans-serif;}
+  @media screen and (max-width: 650px) {
+  .non-js{
+    height: 648px;
+  }
+
+}
+
+@media screen and (max-width: 594px) {
+  .non-js{
+    height: 750px;
+  }
+}
+.homeform{text-decoration: underline;
+  text-underline-offset: 6px;} 
+  
+</style>
+
+{% endblock style %} {% block main %}
+
+
+
+
+
+<div class="non-js">
+  <h3 class="text-7xl space-y-36 content leading-normal mt-7">
+    Hello! My Name is<br />
+    <b>Vishal</b><br />
+    I am a Passionate<br />
+    <b><span class="js" id="element"></span></b>
+  </h3>
+</div>
+<div class="">
+  <button
+    onclick="window.location.href='https://wa.me/+918104626890';"
+    class="relative content bg-black rounded-xl text-white w-48 h-14 mt-7 shadow-sm"
+  >
+    Connect With Me
+  </button>
+</div>
+
+
+
+
+
+
+
+
+{% endblock main %} {% block script %}
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed("#element", {
+    strings: [
+      "Web desinger",
+      "Video Editor",
+      "Frontend developer",
+      "Graphics designer",
+      "Gamer",
+      "Just kidding! XD",
+    ],
+    typeSpeed: 30,
+    loop: true,
+  });
+</script>
+{% endblock script %}

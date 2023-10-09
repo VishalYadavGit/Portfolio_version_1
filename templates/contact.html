@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us{% endblock title %}
+{% block style %} <style>
+    .form {
+        height: 800px;
+        width: 80vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.533);
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px 10px black;
+    }
+    .contactform{text-decoration: underline;
+        text-underline-offset: 6px;}
+
+    .inputss {
+        padding: 1vw;
+        margin-bottom: 30px;
+        width: 60vw;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        box-shadow: 4px 4px black;
+    }
+
+    .formdiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        height: 800px;
+        margin-top: 10px;
+       
+    }
+
+    .heading {
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: rgb(0, 0, 0);
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+        font-weight: 800;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .labels {
+        font-size: x-large;
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: black;
+        font-weight: 500;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+    }
+
+    .specialtxt {
+        padding-bottom: 12vw;
+        width: 60vw;
+        margin-bottom: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        box-shadow: 4px 4px black;
+    }
+
+    .submitwala {
+        width: 100px;
+        /* height: 50px; */
+        padding: 10px;
+        background-color: rgb(105, 200, 239);
+        border-radius: 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        box-shadow: 4px 4px black;
+    }
+
+    @media only screen and (max-width: 494px) {
+        
+      }
+      .all{margin-left: 15px;}
+    
+</style>
+{% endblock style %}
+{% block main %}
+<div class="formdiv">
+    
+    <form class="form" action="/contact" method='post' >
+        {% csrf_token %}
+        <div class="all">
+        <h2 class="heading mr-2 ">Contact Me!</h2>
+        
+            <label class="labels" for="name_surname">Enter Your Name</label><br>
+            <input class="inputss all" type="text" name='name_surname' placeholder="Your Name"><br>
+            <label class="labels" for="email">Enter Your Email</label><br>
+            <input class="inputss all" type="email" name='email' placeholder="abc@email.com"><br>
+            <label class="labels" for="phone">Enter Your Phone number</label><br>
+            <input class="inputss all" type="text" name='phone' placeholder="Phone number"><br>
+            <label class="labels" for="text">Enter Your Message</label><br>
+            <input class="specialtxt all" type="text" name='message' placeholder="Your message">
+        </div>
+        <button class="submitwala">Submit</button>
+    
+
+    </form>
+
+</div>
+
+
+{% endblock main %}
+<!-- {% comment %} <button class="btn btn-primary">Submit</button>
+<input type="email" class="form-control" id="exampleFormControlInput1" name="email" 
+<input type="Mobile" name="phone"
+<input type="Mobile" name="phone"
+<form method="post" action="/contact" 
+{% endcomment %} -->

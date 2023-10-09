@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+
+    <style>
+      li:hover {
+        text-decoration: underline;
+        text-underline-offset: 6px;
+      }
+
+      .bg {
+        background-image: url("static/wallpaper.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: auto;
+        /* height: 100vh; */
+      }
+      /* @media (max-height: 1200px) {
+        .bg {
+          height: 120vh;
+        }
+      } */
+
+      .main {
+        height: auto;
+      }
+
+      .containermain{padding-bottom: 150px;height: 100%;}
+
+      .fonty {
+        font-size: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-weight: 900;
+        letter-spacing: 1px;
+      }
+      /* rgb(105, 200, 239) */
+      .nav-fixed {
+        height: 100px;
+      }
+      .nav-active {
+        background-color: rgb(105, 200, 239);
+        height: 60px;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        border-radius: 9px;
+        z-index: 10;
+        offset-position: top;
+        align-items: center;
+        justify-content: space-between;
+      }
+      /* .nav-proactive{background-color: rgb(235, 35, 43);height: 10vh;display: flex; align-items: center;position: sticky;top: 0;border-radius: 9px;z-index: 10;} */
+      .nav-dead {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        border-radius: 9px;
+        z-index: 10;
+      }
+
+      /* .design{width: 100%;height:100vh; background-color: black;border-radius: 50%;z-index: -1;;
+            ;transform: translateY(-280px);} */
+
+      .invert_manu {
+        -webkit-filter: grayscale(1) invert(1);
+        filter: grayscale(1) invert(1);
+      }
+
+     
+      
+      .footer {
+        height: 100px;
+        color: white;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+      }
+      .scriptwala {
+        margin-left: 10vh text-8xl font-bold h-36 scriptwala;
+      }
+      .lowerfoot {
+        margin-top: 20px;
+      }
+      .nav-width {
+        width: 100%;
+        position: absolute;
+      }
+
+      @media only screen and (max-width: 1110px) {
+        .imgs {
+          display: none;
+        }
+      }
+      .logo {
+        width: 45px;
+      }
+      .hamburger{background-color: black;width: 35px;height: 4px;margin-bottom: 8px;margin-right: 15px;margin-top: 8px;}
+      /* .hamby:hover{background-color: rgba(0, 255, 255, 0.633);} */
+      .hidmenu{width: 100%;display: none;flex-direction: column;background-color:rgb(105, 200, 239) ;height: auto;position: sticky;top: 75px;z-index: 2000;}
+      .hidmenujr{border: 1px solid black;height: 40px;padding-left: 5px;}
+      .hidmenujr:hover{background-color: rgb(183, 216, 230);}
+    </style>
+    {% block style %}{% endblock style %}
+  </head>
+
+  <body>
+    <div class="bg">
+      <div class="nav-dead" id="mynav">
+        <nav
+          class="sticky top-0 ml-8 flex items-center justify-between nav-width"
+        >
+          <ul class="flex items-center">
+            <li>
+              <a style="width: 45px" href=""
+                ><img
+                  class="rounded-3xl logo"
+                  src="https://e7.pngegg.com/pngimages/2/1016/png-clipart-silhouette-of-a-dove-bird-wings-logo.png"
+                  alt=""
+              /></a>
+            </li>
+            <div class="hidden sm:flex">
+            <li class="px-9 py-6 rounded-sm">
+              <a class="text-slate-900 fonty homeform" href="/">Home</a>
+            </li>
+            <li class="px-9 py-6 rounded-sm">
+              <a class="text-slate-900 fonty aboutform" href="/about">About</a>
+            </li>
+            <li class="px-9 py-6 rounded-sm">
+              <a class="text-slate-900 fonty contactform" href="/contact">Contact</a>
+            </li>
+            <li class="px-9 py-6 rounded-sm">
+              <a class="text-slate-900 fonty projectsliform" href="/projects">Projects</a>
+            </li>
+            </div>
+          </ul>
+
+          <ul class="hidden space-x-12 ml-32 mr-12 xl:flex">
+            <a href=""
+              ><img
+                class="w-8"
+                src="https://cdn-icons-png.flaticon.com/512/87/87390.png"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                class="w-8"
+                src="https://cdn-icons-png.flaticon.com/256/61/61109.png"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                class="w-8"
+                src="https://cdn-icons-png.flaticon.com/512/733/733635.png"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                class="w-8"
+                src="https://cdn-icons-png.flaticon.com/512/20/20673.png"
+                alt=""
+            /></a>
+          </ul>
+          <ul class="sm:hidden pl-8 pt-2 hamby">
+            <button onclick="hamby()" class="mr-2"><div><div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div></div></button>
+          </ul>
+        </nav>
+      </div>
+      <div class="hidmenu" id="ham">
+        <a class="hidmenujr" href="/"><span></span>Home</a>
+        <a class="hidmenujr" href="/about"><span></span>About</a>
+        <a class="hidmenujr" href="/contact"><span></span>Contact</a>
+        <a class="hidmenujr" href="/projects"><span></span>Project</a>
+        <a class="hidmenujr" href="/"><span></span>Socials</a>
+      </div>
+      <div class="main sm:h-">
+        <div class="containermain">{% block main %}{% endblock main %}</div>
+      </div>
+    </div>
+    <div class="footer bg-black">
+      <div class="flex justify-center"><p>All Rights Reserved &copy;</p></div>
+      <div class="items-center justify-between lowerfoot">
+        <ul class="flex justify-around items-center space-x-12">
+          <a href=""
+            ><img
+              class="w-8 invert_manu"
+              src="https://cdn-icons-png.flaticon.com/512/87/87390.png"
+              alt=""
+          /></a>
+          <a href=""
+            ><img
+              class="w-8 invert_manu"
+              src="https://cdn-icons-png.flaticon.com/256/61/61109.png"
+              alt=""
+          /></a>
+          <a href=""
+            ><img
+              class="w-8 invert_manu"
+              src="https://cdn-icons-png.flaticon.com/512/733/733635.png"
+              alt=""
+          /></a>
+          <a href=""
+            ><img
+              class="w-8 invert_manu"
+              src="https://cdn-icons-png.flaticon.com/512/20/20673.png"
+              alt=""
+          /></a>
+        </ul>
+      </div>
+    </div>
+
+    {% block script %}{% endblock script %}
+
+    <script>
+        function hamby()
+        {var x = document.getElementById("ham");
+        if (x.style.display == "flex") {
+         x.style.display = "none";
+        console.warn('Button has been clicked');}
+         
+        else {
+         x.style.display = "flex";console.warn('Second  one waas clickeddd')} 
+        }
+      const navbar = document.querySelector("#mynav");
+      window.onscroll = () => {
+        if (window.scrollY > 20) {
+          navbar.classList.add("nav-active");
+          navbar.classList.remove("nav-dead");
+          console.log("Scrolled first");
+        } else {
+          navbar.classList.remove("nav-active");
+          navbar.classList.add("nav-dead");
+        }
+      };
+    </script>
+  </body>
+</html>

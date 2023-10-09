@@ -1,0 +1,1 @@
+This is example of static file means anybody with file name can access the static of the website so be carefull not to put sensitive data in this folder.
