@@ -16,6 +16,8 @@ class Contact(models.Model):
     date=models.DateField()
     def __str__(self):
      return self.email
+    
+
 
 
 # tovar='vystudent68@gmail.com'
