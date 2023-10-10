@@ -1,5 +1,4 @@
 from django.db import models
-
 import smtplib
 from email.message import EmailMessage
 # from home.views import Contact
@@ -16,8 +15,14 @@ class Contact(models.Model):
     date=models.DateField()
     def __str__(self):
      return self.email
-    
 
+class Project(models.Model):
+    projectimg=models.ImageField()
+    protitle=models.CharField(max_length=30)
+    prodescrip=models.CharField(max_length=400)
+    prolink=models.URLField()
+
+print(Project.prolink)
 
 
 # tovar='vystudent68@gmail.com'

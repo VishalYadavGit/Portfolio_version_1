@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from datetime import datetime
-from home.models import Contact
+from home.models import *
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.http import HttpResponse, HttpResponseRedirect
+
 
 # Create your views here.
 
@@ -12,7 +13,9 @@ def index(request):
     # context={'variable':'hehehe'}
     return render(request,'index.html')
 def projects(request):
-    return render(request,'projects.html')
+    projects=Project.objects.all()
+    context = {"projects":projects}
+    return render(request,'projects.html',context)
 def about(request):
     return render(request,'about.html')
 def contact(request):
