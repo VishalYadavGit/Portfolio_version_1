@@ -4,3 +4,4 @@ sqlparse
 gunicorn
 typing_extensions
 tzdata==2023.3
+pillow
