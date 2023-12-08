@@ -8,17 +8,17 @@ from email.message import EmailMessage
 # Create your models here.
 class Contact(models.Model):
     null=True
-    name_surname=models.CharField(max_length=40)
-    email=models.CharField(max_length=50)
-    phone=models.CharField(max_length=12)
-    message=models.TextField()
+    name_surname=models.CharField(max_length=100)
+    email=models.CharField(max_length=256)
+    phone=models.CharField(max_length=100)
+    message=models.CharField(max_length=500)
     date=models.DateField()
     def __str__(self):
      return self.email
 
 class Project(models.Model):
     projectimg=models.ImageField()
-    protitle=models.CharField(max_length=30)
+    protitle=models.CharField(max_length=100)
     prodescrip=models.CharField(max_length=400)
     prolink=models.URLField()
 
