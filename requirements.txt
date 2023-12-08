@@ -2,7 +2,7 @@
 Django
 sqlparse
 gunicorn
-psycopg2
+psycopg2-binary
 typing_extensions
 tzdata==2023.3
 pillow
