@@ -22,7 +22,6 @@ class Project(models.Model):
     prodescrip=models.CharField(max_length=400)
     prolink=models.URLField()
 
-print(Project.prolink)
 
 
 # tovar='vystudent68@gmail.com'
