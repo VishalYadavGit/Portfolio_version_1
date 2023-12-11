@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'hello.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rzrilxuw',
-        'USER': 'rzrilxuw',
-        'PASSWORD': '7QgaYOybz5xCfWaBGAXltsouQCwkSj6R',
+        'NAME': os.environ.get('DATA_USER'),
+        'USER': os.environ.get('DATA_USER'),
+        'PASSWORD': os.environ.get('DATA_PASSWORD'),
         'HOST': 'isabelle.db.elephantsql.com',
         'PORT': '5432',
     }
