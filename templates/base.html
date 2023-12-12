@@ -75,6 +75,7 @@
       /* rgb(105, 200, 239) */
       .nav-fixed {
         height: 100px;
+        transition:height 0.5s ease-in-out;
       }
       .nav-active {
         overflow: hidden;
@@ -89,7 +90,7 @@
         offset-position: top;
         align-items: center;
         justify-content: space-between;
-        transition: 0.2s;
+        transition:height 0.5s ease-in-out;
       }
       /* .nav-proactive{background-color: rgb(235, 35, 43);height: 10vh;display: flex; align-items: center;position: sticky;top: 0;border-radius: 9px;z-index: 10;} */
       .nav-dead {
@@ -309,7 +310,7 @@
 
 
       window.onscroll = () => {
-        if (window.scrollY > 20) {
+        if (window.scrollY >= 20) {
           navbar.classList.add("nav-active");
           navbar.classList.remove("nav-dead");
           console.log("Scrolled first");
